@@ -1,0 +1,18 @@
+---
+import { getPrimaryMenu } from '../lib/api';
+
+const hello = await getPrimaryMenu();
+console.log(JSON.stringify(hello, null, 2));
+---
+
+<nav>
+  <a href="/">AstroPress</a>
+  <code>{JSON.stringify(hello)}</code>
+  <!-- <ul>
+    {menuItems.edges.map((item) => <li key={item.node.path}>
+        <a href={item.node.connectedNode.node.slug}>
+          {item.node.label}
+        </a>
+      </li>)}
+  </ul> -->
+</nav>
